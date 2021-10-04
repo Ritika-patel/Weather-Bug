@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+
+<body>
+    <div class="main-content">
+        <p>Use this site to get your weather!</p>
+
+        <form placeholder="location">
+            <input type="text">
+            <button id="myButton" name="location">search</button>
+        </form>
+    </div>
+
+    <p id="message-1"></p>
+    <p id="message-2"></p>
+
+</body>
+<script src="/js/app.js"></script>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+.Eloc input{
+    padding:2px;
+    border:3px solid grey;
+    border-radius:5px;
+    padding:5px;
+}
+.Eloc button{
+    padding:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin:2px;
+    background: grey;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+.Eloc button:hover{
+    color: grey;
+    background:#28282B;
+    border: 1px solid grey;
+
+}
+.heading{
+  font-family: 'Bree Serif', serif;  
+  color:beige;
+  margin-top:20px;
+  text-align:center;
+
+
+}
+.underline {
+  border-bottom: 12px solid currentColor;
+}
+.Loc-date{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+</style>
+<body style="background: #28282B;">
+
+    <!-- HEADING -->
+    <!-- <div class="heading">
+        <h1><i class="fas fa-cloud-sun"></i>Weather Bug</h1>
+        
+    </div> -->
+
+    <!-- SEARCH -->
+    <!-- <section class="search m-5">
+        <form class="Eloc">
+            <input placeholder="Enter location" type="text">
+            <button id="myButton">search</button>
+            
+        </form>
+    </section> -->
+        <!-- CARD-CURRENT -->
+    <!-- <section class="container">
+        <div class="currentWeather">
+            <div class="card m-5">
+                <div class="card-body">
+                    <div class="Loc-date">                        
+                            <div>London</div>
+                            <div>16.02.05 <br> 12am </div>                        
+                    </div>
+
+                    <div class="Ctemp text-center">
+                        <h1>13° C</h1>
+                        <p style="color:grey">saturday</p>
+                       
+                    </div>
+
+                    <div class="info">
+                        <div class="left">
+                            <p>pressure: 21<br>
+                               Humidity: 11<br>
+                               Wind speed: 11<br>
+                               Pressure: 1<br>
+                        </div>
+                        <div class="right">
+                                <p><img style="height:160px; width:160px; position:absolute; top:110px; right:1px;  " src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></p>                          
+                                 <br><br> <p style="margin-right: 35px;">cloudy</p>               
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </section> -->
+
+    <!-- SLIDER -->
+   <!-- <section class="slider">
+       
+   </section>
+</body>
+</html> --> -->
