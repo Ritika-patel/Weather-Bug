@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 
 <html>
 
@@ -13,20 +13,22 @@
     <div class="main-content">
         <p>Use this site to get your weather!</p>
 
-        <form placeholder="location">
-            <input type="text">
-            <button id="myButton" name="location">search</button>
+        <form placeholder="location" action="/" >
+            <input name="location" type="text">
+            <button type="submit" id="myButton">search</button>
         </form>
     </div>
+
+ 
 
     <p id="message-1"></p>
     <p id="message-2"></p>
 
 </body>
-<script src="/js/app.js"></script>
-</html>
+ <script src="/js/app.js"></script> 
+</html> -->
 
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,6 +49,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
+    
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+body{
+    font-family:'Courgette', cursive;
+    color:grey;
+}
 .Eloc input{
     padding:2px;
     border:3px solid grey;
@@ -88,62 +97,83 @@
     display: flex;
     justify-content: space-between;
 }
-
+.pro{
+    font-size:15px;
+}
 
 
 </style>
 <body style="background: #28282B;">
 
     <!-- HEADING -->
-    <!-- <div class="heading">
+    <div class="heading">
         <h1><i class="fas fa-cloud-sun"></i>Weather Bug</h1>
         
-    </div> -->
+    </div> 
 
     <!-- SEARCH -->
-    <!-- <section class="search m-5">
+    <section class="search m-5">
         <form class="Eloc">
             <input placeholder="Enter location" type="text">
-            <button id="myButton">search</button>
-            
+            <button id="myButton">search</button>            
         </form>
-    </section> -->
-        <!-- CARD-CURRENT -->
-    <!-- <section class="container">
+    </section> 
+         <!-- CARD-CURRENT  -->
+     <section class="container">
         <div class="currentWeather">
             <div class="card m-5">
                 <div class="card-body">
-                    <div class="Loc-date">                        
-                            <div>London</div>
-                            <div>16.02.05 <br> 12am </div>                        
+                    <div class="Loc-date" >                        
+                            <div id="message-1"></div>
+                            
+                            <div>
+                            <div id="date">16.02.05 </div>
+                            <div id="time"> 12am </div> 
+                            </div>                        
                     </div>
 
                     <div class="Ctemp text-center">
-                        <h1>13° C</h1>
-                        <p style="color:grey">saturday</p>
+                       <h1><a id="temp">13</a> <a>° C </a></h1> 
+                        <p style="color:grey" id="week">saturday</p>
                        
                     </div>
 
                     <div class="info">
                         <div class="left">
-                            <p>pressure: 21<br>
-                               Humidity: 11<br>
-                               Wind speed: 11<br>
-                               Pressure: 1<br>
+                            <div class="pro">Feels like : <a id="feels" style="margin:0px;padding:0px">11</a><a>° C</a></div>
+                            <div class="pro" style="float: left;">pressure : <a id="pressure" style="margin:0px;padding:0px">21</a><a>hpa</a></div>
+                            <div class="pro">Humidity : <a id="humidity" style="margin:0px;padding:0px">11</a><a>%</a></div>
+                            <div class="pro">Wind speed : <a id="speed" style="margin:0px;padding:0px">11</a><a>m/s</a></div>
+                            <div class="pro">visibility : <a id="visibility" style="margin:0px;padding:0px">11</a><a>m</a></div>
                         </div>
                         <div class="right">
-                                <p><img style="height:160px; width:160px; position:absolute; top:110px; right:1px;  " src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></p>                          
-                                 <br><br> <p style="margin-right: 35px;">cloudy</p>               
+                                <p><img id="imageid" style="height:160px; width:160px; position:absolute; top:110px; right:1px;" src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></p>                          
+                                 <br><br> <p id="des" style="margin-right: 35px;">cloudy</p>               
                         </div>
                     </div>
                 </div>
               </div>
         </div>
-    </section> -->
+    </section> 
 
-    <!-- SLIDER -->
-   <!-- <section class="slider">
-       
-   </section>
+   <h3 style="text-align:center; color:beige;">Weather Forecast</h3>
+   <section class="container">
+    <div class="currentWeather">
+        <div class="card m-5">
+            <div class="card-body" id="fill" style="overflow-x: auto; display:flex;">
+
+
+            </div>
+          </div>
+    </div>
+</section> 
+
+<div id="daily">
+
+</div>
+
+
+
 </body>
-</html> --> -->
+<script src="/js/app.js"></script> 
+</html> 

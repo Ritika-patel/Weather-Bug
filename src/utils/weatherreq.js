@@ -31,7 +31,8 @@ function timeConverter(UNIX_timestamp){
       data.current.pressure,
       data.current.humidity,
       data.current.wind_speed,
-      data.current.pressure,
+      data.current.visibility,
+      data.current.feels_like,
       data.current.weather[0].description,
       data.current.weather[0].main,
       data.current.weather[0].icon,
@@ -45,14 +46,18 @@ function timeConverter(UNIX_timestamp){
       [ timeConverter(data.daily[7].dt),  data.daily[7].temp.min, data.daily[7].temp.max]
     ]
     
+    const Aicon = [];
     const ATime = [];
     const ATemp = [];
+    const Ades = []
     for(var i=0; i<data.hourly.length; i++){
       
       ATime.push(timeConverter(data.hourly[i].dt))
       ATemp.push(data.hourly[i].temp)
+      Ades.push(data.hourly[i].weather[0].description)
+      Aicon.push(data.hourly[i].weather[0].icon)
     }
-    final = [output, ATime, ATemp]
+    final = [output, ATime, ATemp, Ades, Aicon]
     callback(undefined, final);
 
 
@@ -66,10 +71,10 @@ function timeConverter(UNIX_timestamp){
 });
 }
 
-// weatherreq(26.4499, 80.3319, (error, data) => {
-// console.log(error);
-// console.log(data);
-// })
+weatherreq(26.4499, 80.3319, (error, data) => {
+console.log(error);
+console.log(data);
+})
 
 
 module.exports = weatherreq;
