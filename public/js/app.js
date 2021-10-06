@@ -57,7 +57,7 @@ weatherForm.addEventListener('submit', (e)=>{
                 // const date = document.getElementById("printarray");
                 // const time = document.getElementById("printTime");
                 // const temp = document.getElementById("printTemp")
-                 fill.innerHTML +='<span style="margn:10px; font-size:15px; color:rgba(108, 122, 137, 1); border-radius:10px; text-align:center;  margin-left:20px; padding:20px;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">'+
+                 fill.innerHTML +='<span style="margn:10px; font-size:15px; color:rgba(108, 122, 137, 1); border-radius:10px; text-align:center;  margin-left:20px; padding:20px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">'+
                  '<div style="font-weight:bold;">'+data.data[2][i]+ '°C'+ '<br>'+'</div>'+
                  '<div style="font-size:10px; width:100px;">'+data.data[3][i]+ '<br>'+'</div>'+
                  data.data[1][i][3] + ":"+ data.data[1][i][4]  + ":"+ data.data[1][i][5]+ '<br>'+
@@ -68,7 +68,13 @@ weatherForm.addEventListener('submit', (e)=>{
             
             for(var i=10; i<18; i++){
                 const daily = document.getElementById('daily')
-                daily.innerHTML +=data.data[0][i][0][0] + " " + data.data[0][i][0][1]  + "min :" + data.data[0][i][1] + "max :" + data.data[0][i][2] + '<br>'
+  
+
+                daily.innerHTML +='<span style="margn:10px; font-size:15px; color:rgba(108, 122, 137, 1); border-radius:10px; text-align:center;  margin-left:20px; padding:20px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">'+
+                '<div style="font-weight:bold; width:100px;">'+ data.data[0][i][0][0] + " " + data.data[0][i][0][1] +'</div><br>'+
+                '<div style=" width:100px;">' + "min :" + data.data[0][i][1] +'<br>'+ "max :" + data.data[0][i][2] +'</div><br>'+
+
+               '</span><br>'
             }
                 
             }
