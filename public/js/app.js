@@ -1,4 +1,3 @@
-
 console.log('Client side javascript file is loaded!')
 
 
@@ -24,28 +23,37 @@ weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault()
     const location = search.value;
     messageone.textContent = 'Loading'
-    // messagetwo.textContent = ""
+    visibility.textContent = 'Loading'
+    pressure.textContent = 'Loading'
+    speed.textContent = 'Loading'
+    humidity.textContent = 'Loading'
+    feels.textContent = 'Loading'
 
     fetch('http://localhost:3000/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if(data.error){
                 console.log(data.error)
                 messageone.textContent = data.error
+                visibility.textContent = ''
+                pressure.textContent = ''
+                speed.textContent = ''
+                humidity.textContent = ''
+                feels.textContent = ''
                 
             }else{
                 console.log(data.location)
                 console.log(data.data)
-                
+                imageid.style.display = 'block'
                 messageone.textContent = location
                 date.textContent = data.data[0][0][0]+ " " + data.data[0][0][1]+ " " + data.data[0][0][2]
                 time.textContent = data.data[0][0][3]+ ":" + data.data[0][0][4] + ":" + data.data[0][0][5]
                 week.textContent = data.data[0][0][6]
-                pressure.textContent = data.data[0][2] 
-                humidity.textContent = data.data[0][3]
-                speed.textContent = data.data[0][4] 
-                temp.textContent = data.data[0][1]
-                visibility.textContent = data.data[0][5]
-                feels.textContent = data.data[0][6]
+                pressure.textContent = data.data[0][2]+" "+ 'hpa' 
+                humidity.textContent = data.data[0][3]+" "+ '%'
+                speed.textContent = data.data[0][4] +" "+ 'm/s'
+                temp.textContent = data.data[0][1]+ " "+ '° C '
+                visibility.textContent = data.data[0][5] +" "+ 'm'
+                feels.textContent = data.data[0][6]+ " "+ '° C '
                 des.textContent = data.data[0][7]
                 document.querySelector("#imageid").src="http://openweathermap.org/img/wn/" + data.data[0][9] +".png";
 

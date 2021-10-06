@@ -1,34 +1,27 @@
 <!-- <!DOCTYPE html>
-
 <html>
-
 <head>
     <title>Weather</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
     
 </head>
-
 <body>
     <div class="main-content">
         <p>Use this site to get your weather!</p>
-
         <form placeholder="location" action="/" >
             <input name="location" type="text">
             <button type="submit" id="myButton">search</button>
         </form>
     </div>
-
  
-
     <p id="message-1"></p>
     <p id="message-2"></p>
-
 </body>
  <script src="/js/app.js"></script> 
 </html> -->
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -51,7 +44,6 @@
 <style>
     
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-
 body{
     font-family:'Courgette', cursive;
     color:grey;
@@ -75,15 +67,12 @@ body{
     color: grey;
     background:#28282B;
     border: 1px solid grey;
-
 }
 .heading{
   font-family: 'Bree Serif', serif;  
   color:beige;
   margin-top:20px;
   text-align:center;
-
-
 }
 .underline {
   border-bottom: 12px solid currentColor;
@@ -92,7 +81,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
 .info{
     display: flex;
     justify-content: space-between;
@@ -100,6 +88,20 @@ body{
 .pro{
     font-size:15px;
 }
+
+@media only screen and (max-width: 792px){
+
+  
+  .pro{
+    font-size:10px;
+}
+  #temp{
+      font-size:20px;
+  }
+  #des{
+      font-size: 10px;
+  }
+
 
 
 </style>
@@ -119,7 +121,7 @@ body{
         </form>
     </section> 
          <!-- CARD-CURRENT  -->
-     <section class="container">
+     <section  class="container">
         <div class="currentWeather">
             <div class="card m-5">
                 <div class="card-body">
@@ -127,28 +129,28 @@ body{
                             <div id="message-1"></div>
                             
                             <div>
-                            <div id="date">16.02.05 </div>
-                            <div id="time"> 12am </div> 
+                            <div id="date"> </div>
+                            <div id="time">  </div> 
                             </div>                        
                     </div>
 
                     <div class="Ctemp text-center">
-                       <h1><a id="temp">13</a> <a>° C </a></h1> 
-                        <p style="color:grey" id="week">saturday</p>
+                       <h1><a id="temp"></a> </h1> 
+                        <p style="color:grey" id="week"></p>
                        
                     </div>
 
                     <div class="info">
                         <div class="left">
-                            <div class="pro">Feels like : <a id="feels" style="margin:0px;padding:0px">11</a><a>° C</a></div>
-                            <div class="pro" style="float: left;">pressure : <a id="pressure" style="margin:0px;padding:0px">21</a><a>hpa</a></div>
-                            <div class="pro">Humidity : <a id="humidity" style="margin:0px;padding:0px">11</a><a>%</a></div>
-                            <div class="pro">Wind speed : <a id="speed" style="margin:0px;padding:0px">11</a><a>m/s</a></div>
-                            <div class="pro">visibility : <a id="visibility" style="margin:0px;padding:0px">11</a><a>m</a></div>
+                            <div class="pro">Feels like : <a id="feels" style="margin:0px;padding:0px"></a></div>
+                            <div class="pro" style="float: left;">pressure : <a id="pressure" style="margin:0px;padding:0px"></a></div>
+                            <div class="pro">Humidity : <a id="humidity" style="margin:0px;padding:0px"></a></div>
+                            <div class="pro">Wind speed : <a id="speed" style="margin:0px;padding:0px"></a></div>
+                            <div class="pro">visibility : <a id="visibility" style="margin:0px;padding:0px"></a></div>
                         </div>
                         <div class="right">
-                                <p><img id="imageid" style="height:160px; width:160px; position:absolute; top:110px; right:1px;" src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></p>                          
-                                 <br><br> <p id="des" style="margin-right: 35px;">cloudy</p>               
+                                <p><img id="imageid"  style="height:160px; display:none; width:160px; position:absolute; top:110px; right:1px;" src="http://openweathermap.org/img/wn/10d@2x.png" alt=""></p>                          
+                                 <br><br> <p id="des" style="margin-right: 35px;"></p>               
                         </div>
                     </div>
                 </div>
@@ -169,6 +171,7 @@ body{
 </section> 
 
 
+<h3 style="text-align:center; color:beige;">8 Day Weather Report</h3>
 <section class="container">
     <div class="currentWeather">
         <div class="card m-5">
