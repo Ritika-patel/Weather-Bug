@@ -80,7 +80,7 @@ weatherForm.addEventListener('submit', (e)=>{
 
                 daily.innerHTML +='<span style="margn:10px; font-size:15px; color:rgba(108, 122, 137, 1); border-radius:10px; text-align:center;  margin-left:20px; padding:20px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">'+
                 '<div style="font-weight:bold; width:100px;">'+ data.data[0][i][0][0] + " " + data.data[0][i][0][1] +'</div><br>'+
-                '<div style=" width:100px;">' + "min :" + data.data[0][i][1] +'<br>'+ "max :" + data.data[0][i][2] +'</div><br>'+
+                '<div style=" width:100px;">' + "min :" + data.data[0][i][1] + ' °C ' +'<br>'+ "max :" + data.data[0][i][2] + ' °C ' +'</div><br>'+
 
                '</span><br>'
             }
